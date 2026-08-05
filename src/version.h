@@ -1,0 +1,6 @@
+#ifndef VERSION_NAME
+#define ETR_VERSION_STRING "0.9 dev"
+#else
+#define ETR_VERSION_STRING VERSION_NAME
+#endif
+#define ETR_VERSION 0,8,99,0
