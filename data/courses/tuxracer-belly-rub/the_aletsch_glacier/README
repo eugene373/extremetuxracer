@@ -1,0 +1,18 @@
+This is the course "The Aletsch glacier" for Tuxracer.
+
+The Aletsch glacier in the Alps is Europe's biggest glacier. A glacier is a 
+dangerous area, so be prepaired and have the right equipment for climbing
+when you walk on it.
+Otherwise you could fall into a crevasse and become an "oetzi".
+(Oetzi: Prehistoric human being who was found in the Oetztal-glacier)
+
+
+
+INSTALL:
+Just copy the subdirectory into the contrib-directory of your Tuxracer-dir.
+(Probably one of /usr/share/tuxracer/courses/contrib
+or /usr/local/share/tuxracer/courses/contrib if you have Linux )
+
+If you don't have Tuxracer installed, go to www.tuxracer.com and download a 
+copy of it.
+

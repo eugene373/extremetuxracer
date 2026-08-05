@@ -4,6 +4,7 @@
 # [race] must be unique in this list
 # ---------------------------------------------------------------------
 
+#Original ETR Race declarations- these are unchanged
 *[struct] 0 [race] race_bunnyhill [group] default [course] bunny_hill [light] sunny [snow] 0 [wind] 0
 [herring] 20 22 23 [time] 37 34 30 [theme] calm
 
@@ -19,6 +20,65 @@
 *[struct] 0 [race] race_pathofdaggers [group] default [course] path_of_daggers [light] sunny [snow] 1 [wind] 0
 [herring] 34 38 42 [time] 149 132 128
 
+#Declare PPR Races----------------------------------------------
+
+*[struct] 0 [race] race_penguins [group] planetpenguinracer [course] penguins_cant_fly [light] sunny [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 90 80 70 [theme] calm
+
+*[struct] 0 [race] race_skijump [group] planetpenguinracer [course] ski_jump [light] cloudy [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 25 23 20 [theme] calm
+
+*[struct] 0 [race] race_tuxtobogganrun [group] planetpenguinracer [course] tux-toboggan_run [light] sunny [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 290 280 270 [theme] spunky
+
+*[struct] 0 [race] race_slalom [group] planetpenguinracer [course] slalom [light] evening [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 130 125 120 [theme] calm
+
+*[struct] 0 [race] race_highroad [group] planetpenguinracer [course] high_road [light] night [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 67 64 59 [theme] calm
+
+*[struct] 0 [race] race_keepitup [group] planetpenguinracer [course] keep_it_up [light] night [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 67 64 59 [theme] spunky
+
+*[struct] 0 [race] race_ivegotawoody [group] planetpenguinracer [course] ive_got_a_woody [light] sunny [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 47 44 39 [theme] spunky
+
+*[struct] 0 [race] race_icelabyrinth [group] planetpenguinracer [course] ice_labyrinth [light] night [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 110 100 95 [theme] spunky
+
+*[struct] 0 [race] race_mtherring [group] planetpenguinracer [course] mount_herring [light] sunny [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 250 240 230 [theme] spunky
+
+*[struct] 0 [race] race_hamburgerhill [group] planetpenguinracer [course] hamburger_hill [light] cloudy [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 240 230 220 [theme] spunky
+
+*[struct] 0 [race] race_deadman [group] planetpenguinracer [course] deadman [light] sunny [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 90 85 80 [theme] spunky
+
+*[struct] 0 [race] race_mtsatan [group] planetpenguinracer [course] mount_satan [light] night [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 150 130 120 [theme] calm
+
+*[struct] 0 [race] race_snowvalley [group] planetpenguinracer [course] snow_valley [light] evening [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 47 44 39 [theme] spunky
+
+*[struct] 0 [race] race_hazzardvalley [group] planetpenguinracer [course] hazzard_valley [light] sunny [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 105 95 90 [theme] calm
+
+*[struct] 0 [race] race_skullmountain [group] planetpenguinracer [course] skull_mountain [light] sunny [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 130 120 110 [theme] calm
+
+*[struct] 0 [race] race_thenarrowway [group] planetpenguinracer [course] the_narrow_way [light] cloudy [snow] 0 [wind] 0
+[herring] 0 0 0 [time] 85 75 65 [theme] calm
+
+#End of PPR race declarations
+
+
+
+
+
+
+
+
 # ---------------------------------------------------------------------
 # cups [struct] 1:
 # name and desc are only for display on menu screen, use [cup] for access
@@ -33,10 +93,30 @@
 [num] 2 [1] race_frozenriver [2] race_pathofdaggers
 [desc] Two slightly more challenging courses that shipped with the original Tux Racer.
 
+*[struct] 1 [cup] mountain [name] Mountain Man
+[num] 5 [1] race_icelabyrinth [2] race_mtherring [3] race_hamburgerhill [4] race_deadman [5] race_mtsatan
+[desc] From PPR
+
+*[struct] 1 [cup] valley [name] Valley Cup
+[num] 4 [1] race_snowvalley [2] race_hazzardvalley [3] race_skullmountain [4] race_thenarrowway
+[desc] From PPR
+
+*[struct] 1 [cup] winter [name] Tux the winter sportsman
+[num] 4 [1] race_penguins [2] race_skijump [3] race_tuxtobogganrun [4] race_slalom
+[desc] From PPR
+
+*[struct] 1 [cup] hell [name] Highway to Hell
+[num] 3 [1] race_highroad [2] race_keepitup [3] race_ivegotawoody
+[desc] From PPR
+
 # ---------------------------------------------------------------------
 # events [struct] 2:
 # name is only only for displaying on menu screen, use [event] for access
 # ---------------------------------------------------------------------
 
 *[struct] 2 [event] classics [name] Tux Racer Classics
-[num] 2 [1] canadian [2] swiss
+[num] 5 [1] canadian [2] swiss [3] valley [4] winter [5] hell
+
+*[struct] 2 [event] classics [name] Planet Penguin Racer Classics
+[num] 5 [1] canadian [2] mountain [3] valley [4] winter [5] hell
+

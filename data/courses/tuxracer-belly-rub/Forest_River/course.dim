@@ -1,0 +1,9 @@
+*[width]120.0[length]280.0[play_width]120.0[play_length]250.0
+[startx]86.00[starty]3[angle]19[scale]3.5
+[theme]calm
+[env] tuxracer
+[use_keyframe] 1
+[finish_brake] 15.0
+[author] George Veeder "http://tuxracer1.tripod.com/"
+
+*[desc] TBD.

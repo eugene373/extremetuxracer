@@ -45,3 +45,6 @@
 
 * [name] tree5 [texture] forest_tree4.png [repeat] 0
 	 [coll] 1 [poly] tree [draw] 1
+
+* [name] tree_xmas [texture] tree_xmas.png [repeat] 0
+	 [coll] 1 [poly] tree [draw] 1

@@ -1,0 +1,5 @@
+main-contrib:
+these were courses that were included originally in tuxracer 0.61.
+However these courses never made it into ETR.
+Jool's Big Mountain was particularly hard to "debug", because its trees.png file was not of the same dimensions as elev.png and terrain.png
+This caused frantic object placement. The trees.png file also has a finish pole at the wrong point, so editing items.lst fixed it.
