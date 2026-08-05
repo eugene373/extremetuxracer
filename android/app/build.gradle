@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 31
+    ndkVersion '18.1.5063045'
+
+    defaultConfig {
+        resValue "string", "app_name", "Extreme Tux Racer"
+
+        applicationId = 'com.drodin.extremetuxracer'
+        versionCode = 7
+        versionName = "0.8.107"
+
+        minSdkVersion 16
+        targetSdkVersion 31
+
+        ndk {
+            //abiFilters 'armeabi-v7a'
+            //abiFilters 'arm64-v8a'
+            //abiFilters 'x86'
+            //abiFilters 'x86_64'
+        }
+
+        def hunterBuildSharedLibs = false
+        manifestPlaceholders.androidAppLibName = "${hunterBuildSharedLibs?'sfml-activity-d':'extremetuxracer'}"
+
+        externalNativeBuild {
+            cmake {
+                arguments '-DANDROID_STL=c++_static',
+                          '-DANDROID_STUDIO=1',
+                          '-DCMAKE_VERBOSE_MAKEFILE=1',
+                          '-DHUNTER_KEEP_PACKAGE_SOURCES=1',
+                          "-DHUNTER_BUILD_SHARED_LIBS=${hunterBuildSharedLibs?'ON':'OFF'}",
+                          "-DAPPLICATION_ID=${applicationId}",
+                          "-DVERSION_NAME=${versionName}"
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+        }
+        debug {
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path '../../CMakeLists.txt'
+            buildStagingDirectory "${project.buildDir}/../.cxx"
+            version "3.18.1"
+        }
+    }
+}
